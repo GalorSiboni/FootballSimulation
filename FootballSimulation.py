@@ -1,16 +1,29 @@
 import random
+from abc import ABC, abstractmethod
 
-class Person:
+class Human(ABC):
+    
+    @abstractmethod
+    def getName(self):
+        pass
+    
+    @abstractmethod    
+    def getAge(self):
+        pass
+
+class Person(Human):
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
+    # overriding abstract method
     def getName(self):
         return self.name
 
+    # overriding abstract method
     def getAge(self):
         return self.age
-
+    
 
 class Player(Person):
 
