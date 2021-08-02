@@ -3,6 +3,8 @@ from abc import ABC, abstractmethod
 
 class Human(ABC):
     
+    __metaclass__ = abc.ABCMeta
+
     @abstractmethod
     def getName(self):
         pass
